@@ -1,23 +1,25 @@
+def main():
+    x, y = get_fraction()
+    output = get_output(x, y)
+    print(output)
 
-while True:
-    fraction = input("Fraction: ")
+def get_fraction():
+    while True:
+        try:
+            x, y = input("Fraction: ").split("/")
+            x = int(x)
+            y = int(y)
+            if not (x > y or y <= 0 or x < 0):
+                return x, y
+        except ValueError:
+            continue
 
-    try:
-        x, y = fraction.split("/")
-        x = float(x)
-        y = float(y)
-        result = x / y
-        if x > 0 and y > 0 and x <= y:
-            break
-    except (ValueError, ZeroDivisionError):
-        continue
-
-result = round(result * 100)
-
-if result >= 99:
-    print("F")
-elif result <= 1:
-    print("E")
-else:
-    print(f"{result}%")
+def get_output(x, y):
+    output = round(x / y * 100)
+    if output >= 99:
+        return "F"
+    elif output <= 1:
+        return "E"
+    else:
+        return f"{output}%"
 
