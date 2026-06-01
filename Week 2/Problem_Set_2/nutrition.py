@@ -23,5 +23,5 @@ fruits = {
     "watermelon": 80
 }
 
-calories = fruits.get(fruit, "Unknown")
-print(f"Calories: {calories}")
+if fruit in fruits:
+    print(f"Calories: {fruits[fruit]}")

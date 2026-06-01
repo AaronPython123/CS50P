@@ -1,5 +1,5 @@
 
-input = input("Expression: ").strip
+input = input("Expression: ").strip()
 
 x, y, z = input.split()
 

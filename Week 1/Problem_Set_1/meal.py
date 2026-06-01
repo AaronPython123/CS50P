@@ -1,24 +1,23 @@
-
 def main():
-    time = input("What time is it? ")
-    
-    hours, minutes = convert(time)
+    time_str = input("What time is it? ")
+    time = convert(time_str) 
+    output = get_output(time)
+    if output: 
+        print(output)
 
-    if (hours == 8 and minutes == 0) or hours == 7:
-        print("breakfast time")
-    elif (hours == 13 and minutes == 0) or hours == 12:
-        print("lunch time")
-    elif (hours == 19 and minutes == 0) or hours == 18:
-        print("dinner time")
+def convert(time_str): 
+    hour, minute = time_str.split(":")
+    return float(hour) + float(minute) / 60
+
+def get_output(time):
+    if 7.0 <= time <= 8.0:
+        return "breakfast time"  
+    elif 12.0 <= time <= 13.0:
+        return "lunch time"
+    elif 18.0 <= time <= 19.0:
+        return "dinner time"
     else:
-        print()
+        return ""
 
-def convert(time):
-    hours, minutes = time.split(":")
-
-    hours = int(hours)
-    minutes = int(minutes)
-    return hours, minutes
-
-main()
-    
+if __name__ == "__main__":
+    main()
