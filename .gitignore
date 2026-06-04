@@ -6,3 +6,5 @@ myvenv/
 .vscode/
 *.pkgf
 *.dYSM*
+.pytest_cache/
+__pycache__/
