@@ -1,6 +1,6 @@
 import pytest
 
-from e_convert import convert
+from Week_5.Lectures.Convert.convert import convert
 
 
 def test_int_conversion():

@@ -1,4 +1,4 @@
-from c_hello import hello
+from Week_5.Lectures.Hello.hello import hello
 
 
 def test_default():

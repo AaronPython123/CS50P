@@ -1,4 +1,4 @@
-from fuel import convert as c, gauge as g
+from Week_5.Problem_Set.Refueling.fuel import convert as c, gauge as g
 
 import pytest
 

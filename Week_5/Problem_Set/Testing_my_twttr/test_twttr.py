@@ -1,4 +1,4 @@
-from twttr import shorten as s
+from Week_5.Problem_Set.Testing_my_twttr.twttr import shorten as s
 
 import pytest
 

@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
 import pytest
 
-from a_calculator import square
+from Week_5.Lectures.Calculator.calculator import square
 
 
 def test_positive():
