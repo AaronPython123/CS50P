@@ -7,9 +7,9 @@ def main():
 
 def convert(s):
     start_raw, end_raw = s.split(" to ")
-    pattern = r"(\d{1,2})(?::(\d{2}))? (AM|PM)"
-    start_match = re.search(pattern, start_raw)
-    end_match = re.search(pattern, end_raw)
+    pattern = r"^(\d{1,2})(?::(\d{2}))? (AM|PM)$"
+    start_match = re.search(pattern, start_raw.strip())
+    end_match = re.search(pattern, end_raw.strip())
 
     if not start_match or not end_match:
         raise ValueError

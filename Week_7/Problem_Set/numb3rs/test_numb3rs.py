@@ -15,6 +15,8 @@ def test_correct_length():
 
 def test_range():
     assert v("266.255.255.255") == False
+    assert v("1.277.255.255") == False
+
 
 
 def test_leading_zeros():

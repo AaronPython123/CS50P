@@ -7,7 +7,7 @@ def main():
 
 def parse(s):
     if match := re.search(
-        r"https?://(?:www\.)?youtube\.com/embed/(?P<video_id>\w+)", s
+        r'<iframe.*?src="https?://(?:www\.)?youtube\.com/embed/(?P<video_id>\w+)"', s
     ):
         sharable = f"https://youtu.be/{match.group("video_id")}"
         return sharable
