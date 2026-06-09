@@ -1,8 +1,9 @@
 import re
 
+
 def main():
     code = input("Hexadecimal color code: ")
-    
+
     pattern = r"^#[A-F0-9]{6}$"
     match = re.search(pattern, code)
     if match:
